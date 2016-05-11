@@ -1,0 +1,16 @@
+img{
+    opacity: 1;
+}
+
+img:hover{
+    opacity: 0.40;
+}
+.over span.info{
+    display: none;
+}
+
+.over:hover span.info{
+    display: inline;
+    width: 100px;
+    height: 100px;
+}
