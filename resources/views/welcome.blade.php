@@ -75,7 +75,7 @@
                     <!-- <span class="info glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                     <span class=" info glyphicon glyphicon-pencil" aria-hidden="true"></span> -->
                 <h3>
-                    <a href="#">Carta 1</a>
+                    <a href="{{ URL::to('/plantillas') }}">Carta 1</a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
