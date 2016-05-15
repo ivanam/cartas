@@ -18,7 +18,6 @@ class MailController extends Controller
     	$r= Mail::queue('emails.info',$datos,function($msj) use($datos){
     	 	$msj->subject('Carta Generada');
     	 	$msj->to($datos["destino"]);
-    	 	//$msj->to("leandroluque.tw@gmail.com");
     	 	$msj->attach(storage_path('app')."/test.pdf");
     	});
     }

@@ -1,4 +1,4 @@
-$("#btnDescargar").click(function(){
+$("#btnGuardar").click(function(){
 	var contenido = {"contenido":$("#carta").html()};
 	$.ajax({
 		type:"post",
@@ -8,16 +8,29 @@ $("#btnDescargar").click(function(){
   		},
 		data:contenido,
 		dataType:"json",
-		success:function(data){
-			console.log(data);
+		complete:function(data){
+			if (data.status==200 && data.responseText=="1"){
+				var modal = $("#modal");
+				modal.find(".modal-title").text("Exito");
+				modal.find(".modal-body p").text("La carta ha sido generada exitosamente");
+				modal.find(".modal-header").attr({"style":"background-color:#337ab7"});
+				modal.find("h4").attr({"style":"color: black"});
+				modal.modal("show");
+			}
 		}
 	});
 });
 
 
 $("#btnEnviar").click(function(){
+	var modal = $("#mails");
+	modal.modal("show");
+});
+
+$("#btnEnviarModal").click(function(){
+
 	var contenido = { contenido:$("#carta").html(),
-					  destino:"lealuque.tw@gmail.com",
+					  destino:$("#destinatario").val(),
 					};
 	$.ajax({
 		type:"post",
@@ -27,9 +40,7 @@ $("#btnEnviar").click(function(){
   		},
 		data:contenido,
 		complete:function(data){
-			console.log(data);
+			$("#mails").modal("hide");
 		}
 	});
 });
-
-

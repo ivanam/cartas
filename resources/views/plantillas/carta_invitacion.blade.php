@@ -84,16 +84,58 @@
         <br>
 
         <div class="row">
-            <button type="button" class="btn btn-lg btn-primary" id="btnDescargar">
-                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Descargar
+            <button type="button" class="btn btn-lg btn-primary" id="btnGuardar">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
             </button>
             <button type="button" class="btn btn-lg btn-primary" id="btnEnviar"> 
                 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
             </button>
         </div>
-   
     </div>
 
+    <!--Modal-->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+        </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="mails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title"> Destinatario</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group input-group-lg">
+                              <span class="input-group-addon" id="sizing-addon1">@</span>
+                              <input id="destinatario" type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="btnEnviarModal" class="btn btn-success pull-right"> Enviar</button> 
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!--- Scripts -->    
     <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
