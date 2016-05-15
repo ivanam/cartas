@@ -2,7 +2,11 @@
 <html>
 <head>
 	<title> Creador de Cartas</title>
-	<!-- Bootstrap Core CSS -->
+	
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap Core CSS -->
     <link href="{{ URL::asset('static/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- GRID VIEW CSS -->
@@ -10,8 +14,6 @@
 
     <!-- Custom CSS -->
     <link href="{{ URL::asset('static/css/portada.css') }}" rel="stylesheet">
-
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style type="text/css">
 
@@ -31,7 +33,7 @@
 
         #carta{
             border-radius: 25px;
-            border: 5px solid #73AD21;
+            border: 5px solid #0B0B61;
             padding: 20px;  
         }
 
@@ -82,8 +84,12 @@
         <br>
 
         <div class="row">
-            <button type="button" class="btn btn-lg btn-primary" id="btnDescargar"> Descargar</button>
-            <button type="button" class="btn btn-lg btn-primary" id="btnEnviar"> Enviar Mail</button>
+            <button type="button" class="btn btn-lg btn-primary" id="btnDescargar">
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Descargar
+            </button>
+            <button type="button" class="btn btn-lg btn-primary" id="btnEnviar"> 
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
+            </button>
         </div>
    
     </div>

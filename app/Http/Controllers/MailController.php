@@ -13,15 +13,13 @@ class MailController extends Controller
     public function enviar(Request $request){
 
     	$datos = $request->all();
-    	$pdf = PDF::loadHTML($datos["destino"]);
-    	$destino = $datos["destino"];
+    	$pdf = PDF::loadHTML($datos["contenido"])->setOrientation("landscape");
 		Storage::disk('local')->put("test.pdf",$pdf->output());
-    	$r= Mail::queue('emails.info',array(),function($msj){
+    	$r= Mail::queue('emails.info',$datos,function($msj) use($datos){
     	 	$msj->subject('Carta Generada');
-    	 	//$msj->to($destino);
-    	 	$msj->to("leandroluque.tw@gmail.com");
+    	 	$msj->to($datos["destino"]);
+    	 	//$msj->to("leandroluque.tw@gmail.com");
     	 	$msj->attach(storage_path('app')."/test.pdf");
     	});
-    	return $destino;
     }
 }
