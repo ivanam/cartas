@@ -16,9 +16,17 @@ class PdfController extends Controller
     	// Crea el pdf correspondiente, lo guarda en el servidor
     	// y lo mando al browser
 		$datos = $request->all();
-    $pdf = PDF::loadHTML($datos["contenido"]);
-    $nombre_archivo = "test.pdf";
+	    $pdf = PDF::loadHTML($datos["contenido"]);
+	    $nombre_archivo = "test.pdf";
 		Storage::disk('local')->put($nombre_archivo,$pdf->output());
 		return "1";
+	}
+
+	public function descargar($nombre){
+		$file= storage_path('app')."/test.pdf";
+        $headers = array(
+              'Content-Type: application/pdf',
+            );
+        return Response::download($file, 'carta.pdf', $headers);
 	}
 }
