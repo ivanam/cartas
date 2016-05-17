@@ -21,3 +21,11 @@ Route::get('/', function () {
 Route::get('/creador',function(){
 	return view('crearvista');
 });
+
+Route::get('/plantillas',function(){
+	return view('plantillas/carta_invitacion');
+});
+
+Route::post('enviar', 'MailController@enviar');
+
+Route::post('guardar','PdfController@guardar');
