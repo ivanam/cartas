@@ -18,14 +18,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/creador',function(){
+Route::get('creador',function(){
 	return view('crearvista');
 });
 
-Route::get('/plantillas',function(){
+Route::get('plantillas/carta_invitacion',function(){
 	return view('plantillas/carta_invitacion');
 });
+
+Route::get('plantillas/{id}','PlantillaController@armarplantilla');
 
 Route::post('enviar', 'MailController@enviar');
 
 Route::post('guardar','PdfController@guardar');
+
+Route::post('crear','ModeloController@crear');
+
+Route::get('mismodelos','ModeloController@mismodelos');
+
+Route::get('descargar/{nombre}','PdfController@descargar');
