@@ -32,6 +32,15 @@ Route::post('enviar', 'MailController@enviar');
 
 Route::post('guardar','PdfController@guardar');
 
+
+Route::get('login', 'AuthController@showLogin'); // Mostrar login
+Route::post('login', 'AuthController@postLogin'); // Verificar datos
+Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
 Route::post('crear','ModeloController@crear');
 
 Route::get('mismodelos','ModeloController@mismodelos');
