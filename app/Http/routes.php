@@ -46,3 +46,15 @@ Route::post('crear','ModeloController@crear');
 Route::get('mismodelos','ModeloController@mismodelos');
 
 Route::get('descargar/{nombre}','PdfController@descargar');
+
+// Route::get('test',function(Request $request){
+	
+// 		$usuario = $request->user();
+// 		if (is_object($usuario)){
+// 			return $usuario->username;
+// 		}else{
+// 			return "hola";
+// 		}
+	
+	
+// });

@@ -16,7 +16,14 @@ class ModeloController extends Controller
     	$descripcion = $datos["descripcion"];
     	$cadena = preg_replace('/\[(\w+)\]/', '<span class="editable" contenteditable="true">${1}</span>', $cadena);
     	$plantilla = new Modelo;
-    	$plantilla->usuario ="leandro";
+        
+        if (is_object($request->user())){
+            $usuario = $request->user()->username;
+        }else{
+            $usuario = "Visitante";
+        }
+
+    	$plantilla->usuario =$usuario;
     	$plantilla->contenido = $cadena;
     	$plantilla->nombre = $nombre;
     	$plantilla->descripcion = $descripcion;
@@ -24,9 +31,19 @@ class ModeloController extends Controller
     	return $cadena;
     }
 
-    public function mismodelos(){
+    public function mismodelos(Request $request){
 
-    	$modelos = Modelo::where('usuario','=',"leandro")->get();
+        $usuario = $request->user();
+        /*Este control debe desaparecer si se supone
+        que el usuario siempre debe estar logueado para
+        entrar a esta ruta*/
+        if (is_object($usuario)){
+            $username = $usuario->username;
+        }else{
+            $username = "";
+        }
+        
+    	$modelos = Modelo::where('usuario','=',$username)->get();
     	return view("mismodelos",['modelos'=>$modelos]);
     }
 }

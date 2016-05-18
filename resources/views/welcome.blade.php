@@ -41,13 +41,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Mis Modelos</a>
+                        <a href="{{ URL::to('mismodelos') }}">Mis Modelos</a>
                     </li>
                     <li>
                         <a href="#">Modelos Compartidos</a>
                     </li>
                     <li>
-                        <a href="{{ URL::to('/creador') }}">Crear Modelo de Carta</a>
+                        <a href="{{ URL::to('creador') }}">Crear Modelo de Carta</a>
                     </li>
                 </ul>
             </div>
