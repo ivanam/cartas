@@ -47,6 +47,9 @@
                         <a href="#">Modelos Compartidos</a>
                     </li>
                     <li>
+                        <a href="{{ URL::to('miscartas') }}">Mis cartas</a>
+                    </li>
+                    <li>
                         <a href="{{ URL::to('creador') }}">Crear Modelo de Carta</a>
                     </li>
                 </ul>

@@ -52,11 +52,11 @@
         </div>
         <br>
         <div class="row">
-            <button type="button" class="btn btn-lg btn-danger pull-right" id="btnBorrar"> 
+            <button type="button" class="btn btn-md btn-danger pull-right" id="btnBorrar"> 
                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar
             </button>
             <span class="pull-right"> &nbsp;</span>
-            <button type="button" class="btn btn-lg btn-success pull-right" id="btnCrear">
+            <button type="button" class="btn btn-md btn-success pull-right" id="btnCrear">
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Crear
             </button>
         </div>

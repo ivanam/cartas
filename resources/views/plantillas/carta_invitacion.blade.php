@@ -57,12 +57,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Mis Modelos</a>
+                        <a href="{{ URL::to('/mismodelos') }}">Mis Modelos</a>
                     </li>
                     <li>
                         <a href="#">Modelos Compartidos</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="{{ URL::to('/creador') }}">Crear Modelo de Carta</a>
                     </li>
                 </ul>
@@ -74,6 +74,27 @@
 
     <div class="container" >
 
+        <div class="row">
+            <div class="col-lg-2">
+                <h4>Nombre Carta</h4>
+            </div>
+            <div class="col-lg-6">
+                <input class="form-control" type="text" id="nombre_archivo">             
+            </div> 
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-md btn-primary center-block" id="btnGuardar">
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
+                </button>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-md btn-primary center-block" id="btnEnviar"> 
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
+                </button>
+            </div>           
+        </div>
+
+        <br>
+
         <div class="row" id="carta">
             <p>Estimado <span id="editable"contenteditable="true">NOMBRE, APELLIDO</span>:</p>
             <p style="padding-left: 210px;">Lo invito a pariticipar del evento <span id="editable"contenteditable="true">EVENTO</span> a realizarse el dia <span id="editable"contenteditable="true">DIA-DE-EVENTO</span> en <span id="editable"contenteditable="true">LUGAR-EVENTO</span>. <span id="editable"contenteditable="true">MOTIVO-EVENTO</span></p>
@@ -83,14 +104,14 @@
 
         <br>
 
-        <div class="row">
+        <!-- <div class="row">
             <button type="button" class="btn btn-lg btn-primary" id="btnGuardar">
                 <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
             </button>
             <button type="button" class="btn btn-lg btn-primary" id="btnEnviar"> 
                 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
             </button>
-        </div>
+        </div> -->
     </div>
 
     <!--Modal-->

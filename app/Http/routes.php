@@ -26,12 +26,14 @@ Route::get('plantillas/carta_invitacion',function(){
 	return view('plantillas/carta_invitacion');
 });
 
+Route::get('plantillas/carta_despido',function(){
+	return view('plantillas/carta_despido');
+});
+
+
 Route::get('plantillas/{id}','PlantillaController@armarplantilla');
 
 Route::post('enviar', 'MailController@enviar');
-
-Route::post('guardar','PdfController@guardar');
-
 
 Route::get('login', 'AuthController@showLogin'); // Mostrar login
 Route::post('login', 'AuthController@postLogin'); // Verificar datos
@@ -41,20 +43,10 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('mismodelos','ModeloController@mismodelos');
 Route::post('crear','ModeloController@crear');
 
-Route::get('mismodelos','ModeloController@mismodelos');
+Route::get('miscartas','CartaController@miscartas');
 
 Route::get('descargar/{nombre}','PdfController@descargar');
-
-// Route::get('test',function(Request $request){
-	
-// 		$usuario = $request->user();
-// 		if (is_object($usuario)){
-// 			return $usuario->username;
-// 		}else{
-// 			return "hola";
-// 		}
-	
-	
-// });
+Route::post('guardar','PdfController@guardar');
