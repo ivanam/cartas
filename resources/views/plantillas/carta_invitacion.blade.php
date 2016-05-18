@@ -1,3 +1,4 @@
+@extends('plantillas/layaoutCarta')
 <!DOCTYPE html>
 <html>
 <head>

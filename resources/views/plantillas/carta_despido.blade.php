@@ -1,13 +1,5 @@
-@extends('plantillas/layaout')
-@section('encabezado')
-    @parent
-@endsection
-@section('script')
-@endsection
-@section('navigation')
-    @parent
-@endsection
-@section('contenido')
+@extends('plantillas/layaoutCarta')
+@section('contenidoCarta')
 <div class="container" >
     <div class="row" id="carta">
         <p align="right"><span id ="editable" contenteditable="true">Trelew, 17 de junio de 2016</span></p>
@@ -24,17 +16,6 @@
         <p align="center"> Atentamente, </p>
         <br><br>
         <p align="center"> FIRMA Y SELLO DE LA EMPRESA </p>
-    </div>
-
-    <br>
-
-    <div class="row">
-        <button type="button" class="btn btn-lg btn-primary" id="btnGuardar">
-            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
-        </button>
-        <button type="button" class="btn btn-lg btn-primary" id="btnEnviar"> 
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
-        </button>
     </div>
 </div>
  @endsection
