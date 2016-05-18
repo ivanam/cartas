@@ -12,6 +12,7 @@ class PlantillaController extends Controller
     public function armarplantilla($id){
     	$modelo = Modelo::find($id);
     	$contenido = $modelo->contenido;
+    	//return strlen($contenido);
     	return view('plantillas/customview',["contenido"=>$contenido]);
     	//return "1";
     }
