@@ -17,7 +17,7 @@ class PdfController extends Controller
     	// Crea el pdf correspondiente, lo guarda en el servidor
     	// y lo mando al browser
 		$datos = $request->all();
-		$usuario = $request->user()->username;
+		$usuario = $request->user()->email;
 	    $pdf = PDF::loadHTML($datos["contenido"]);
 	    $carta = new Carta;
 	    $carta->usuario = $usuario;

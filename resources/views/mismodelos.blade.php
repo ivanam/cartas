@@ -75,7 +75,7 @@
     <div class="container" >
 
             <div class="row">
-                <h1> Listados de Modelos</h1>
+                <h1> Listado de Modelos</h1>
             </div>
 
             <br>
@@ -104,6 +104,9 @@
                                 <button type="button" class="btn btn-sm btn-danger">
                                     <span class="glyphicon glyphicon-trash"></span> Eliminar
                                 </button>
+                                <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
+                                    <span class="glyphicon glyphicon-share"></span> Compartir
+                                </a>
                             </td>';
                         echo "</tr>";
                     ?>
@@ -111,6 +114,34 @@
                     @endforeach
                 </table>
             </div>          
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="compartir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Modelo</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group input-group-lg">
+                              <span class="input-group-addon" id="sizing-addon1">@</span>
+                              <input id="destinatario" type="text" class="form-control" placeholder="ejemplo@ejemplo.com" aria-describedby="sizing-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="btnEnviarModal" class="btn btn-default pull-right"> Compartir</button> 
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!--- Scripts -->    

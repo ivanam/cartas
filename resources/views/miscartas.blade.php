@@ -78,7 +78,7 @@
     <div class="container" >
 
             <div class="row">
-                <h1> Listados de Cartas</h1>
+                <h1> Listado de Cartas</h1>
             </div>
 
             <br>

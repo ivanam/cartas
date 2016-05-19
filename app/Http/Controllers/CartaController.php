@@ -16,7 +16,7 @@ class CartaController extends Controller
         que el usuario siempre debe estar logueado para
         entrar a esta ruta*/
         if (is_object($usuario)){
-            $username = $usuario->username;
+            $username = $usuario->email;
         }else{
             $username = "";
         }

@@ -18,7 +18,7 @@ class ModeloController extends Controller
     	$plantilla = new Modelo;
         
         if (is_object($request->user())){
-            $usuario = $request->user()->username;
+            $usuario = $request->user()->email;
         }else{
             $usuario = "Visitante";
         }
@@ -38,7 +38,7 @@ class ModeloController extends Controller
         que el usuario siempre debe estar logueado para
         entrar a esta ruta*/
         if (is_object($usuario)){
-            $username = $usuario->username;
+            $username = $usuario->email;
         }else{
             $username = "";
         }

@@ -1,5 +1,12 @@
-$("#btnUsar").click(function(){
+$(".btn-warning").click(function(){
 
-	alert("hola");
-
+	var id = $(this).attr("id");
+	$("#compartir").modal("show");
+	display_modal(id);
 });
+
+function display_modal(id){
+
+	
+
+}
