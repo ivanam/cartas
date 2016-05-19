@@ -45,6 +45,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('mismodelos','ModeloController@mismodelos');
 Route::post('crear','ModeloController@crear');
+Route::get('compartidos','ModeloController@compartidos');
+Route::post('compartir','ModeloController@compartir');
 
 Route::get('miscartas','CartaController@miscartas');
 

@@ -46,4 +46,12 @@ class ModeloController extends Controller
     	$modelos = Modelo::where('usuario','=',$username)->get();
     	return view("mismodelos",['modelos'=>$modelos]);
     }
+
+    public function compartidos(Request $request){
+
+    }
+
+    public function compartir(Request $request){
+
+    }
 }

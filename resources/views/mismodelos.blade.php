@@ -136,7 +136,7 @@
                     <br>
                     <div class="row">
                         <div class="col-md-12">
-                            <button id="btnEnviarModal" class="btn btn-default pull-right"> Compartir</button> 
+                            <button id="btnCompartir" class="btn btn-default pull-right"> Compartir</button> 
                         </div>    
                     </div>
                 </div>
