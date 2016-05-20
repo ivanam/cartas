@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Creador 2.0</a>
+            <a class="navbar-brand" href="/home">Creador 2.0</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -47,6 +47,9 @@
                 <li>
                     <a href="{{ URL::to('creador') }}">Crear Modelo de Carta</a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{{ URL::to('logout') }}">Salir</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
