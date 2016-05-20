@@ -4,21 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\CartaUsuario;
 use Mail;
 use Storage;
 use PDF;
+
 
 class MailController extends Controller
 {
     public function enviar(Request $request){
 
-    	$datos = $request->all();
-    	$pdf = PDF::loadHTML($datos["contenido"])->setOrientation("landscape");
-		Storage::disk('local')->put("test.pdf",$pdf->output());
-    	$r= Mail::queue('emails.info',$datos,function($msj) use($datos){
-    	 	$msj->subject('Carta Generada');
-    	 	$msj->to($datos["destino"]);
-    	 	$msj->attach(storage_path('app')."/test.pdf");
+    	$info = $request->all();
+    	$ruta = CartaUsuario::find($info["id_pdf"])->patharchivo;
+    	$r= Mail::send('emails.info',$info,function($msj) use($datos){
+    	   	$msj->subject('Carta Generada');
+    	   	$msj->to($info["destino"]);
+    	   	$msj->attach($ruta);
     	});
     }
 }

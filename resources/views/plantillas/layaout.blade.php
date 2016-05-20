@@ -15,11 +15,7 @@
     <!-- Custom CSS -->
     <link href="{{ URL::asset('static/css/portada.css') }}" rel="stylesheet">
     @show
-    @section('script')
-     <!--- Scripts -->    
-    <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
-    @show
+    
 </head>
 <body>
 @section('navigation')
@@ -43,10 +39,13 @@
                     <a href="{{ URL::to('mismodelos') }}">Mis Modelos</a>
                 </li>
                 <li>
-                    <a href="#">Modelos Compartidos</a>
+                    <a href="{{ URL::to('compartidos')}}">Modelos Compartidos</a>
                 </li>
                 <li>
-                    <a href="{{ URL::to('/creador') }}">Crear Modelo de Carta</a>
+                    <a href="{{ URL::to('miscartas')}}">Mis Cartas</a>
+                </li>
+                <li>
+                    <a href="{{ URL::to('creador') }}">Crear Modelo de Carta</a>
                 </li>
             </ul>
         </div>
@@ -56,5 +55,11 @@
 </nav>
 @show
 @yield('contenido')
+
+@section('script')
+     <!--- Scripts -->    
+    <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
+@show
 </body>
 </html>

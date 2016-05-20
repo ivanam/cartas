@@ -60,10 +60,13 @@
                         <a href="#">Mis Modelos</a>
                     </li>
                     <li>
-                        <a href="#">Modelos Compartidos</a>
+                        <a href="{{ URL::to('compartidos')}}">Modelos Compartidos</a>
                     </li>
                     <li>
-                        <a href="{{ URL::to('/creador') }}">Crear Modelo de Carta</a>
+                        <a href="{{ URL::to('miscartas')}}">Mis Cartas</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('creador') }}">Crear Modelo de Carta</a>
                     </li>
                 </ul>
             </div>
@@ -81,38 +84,40 @@
             <br>
 
             <div class="row">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th> Nombre </th>       
-                        <th> Descripcion </th>
-                        <th> Fecha Creación </th>
-                        <th>  </th>
-                    </tr>
-                    </thead>
+                <div class="col-lg-offset-1">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th> Nombre </th>       
+                            <th> Descripcion </th>
+                            <th> Fecha Creación </th>
+                            <th>  </th>
+                        </tr>
+                        </thead>
 
-                    @foreach ($modelos as $modelo)
-                    <?php
-                        echo "<tr>";
-                        echo "<td>".$modelo->nombre."</td>";
-                        echo "<td>".$modelo->descripcion."</td>";
-                        echo "<td>".$modelo->created_at."</td>";
-                        echo '<td> 
-                                <a href="plantillas/'.$modelo->id.'" class="btn btn-sm btn-primary">
-                                    <span class="glyphicon glyphicon-hand-right"></span> Usar
-                                </a>
-                                <button type="button" class="btn btn-sm btn-danger">
-                                    <span class="glyphicon glyphicon-trash"></span> Eliminar
-                                </button>
-                                <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
-                                    <span class="glyphicon glyphicon-share"></span> Compartir
-                                </a>
-                            </td>';
-                        echo "</tr>";
-                    ?>
-                    </div>
-                    @endforeach
-                </table>
+                        @foreach ($modelos as $modelo)
+                        <?php
+                            echo "<tr>";
+                            echo "<td>".$modelo->nombre."</td>";
+                            echo "<td>".$modelo->descripcion."</td>";
+                            echo "<td>".$modelo->created_at."</td>";
+                            echo '<td> 
+                                    <a href="plantillas/'.$modelo->id.'" class="btn btn-sm btn-primary">
+                                        <span class="glyphicon glyphicon-hand-right"></span> Usar
+                                    </a>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span> Eliminar
+                                    </button>
+                                    <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
+                                        <span class="glyphicon glyphicon-share"></span> Compartir
+                                    </a>
+                                </td>';
+                            echo "</tr>";
+                        ?>
+                        </div>
+                        @endforeach
+                    </table>
+                </div>
             </div>          
     </div>
 

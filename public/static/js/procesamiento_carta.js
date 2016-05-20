@@ -9,28 +9,28 @@ $("#btnGuardar").click(function(){
 });
 
 
-$("#btnEnviar").click(function(){
-	var modal = $("#mails");
-	modal.modal("show");
-});
+// $("#btnEnviar").click(function(){
+// 	var modal = $("#mails");
+// 	modal.modal("show");
+// });
 
-$("#btnEnviarModal").click(function(){
+// $("#btnEnviarModal").click(function(){
 
-	var contenido = { contenido:$("#carta").html(),
-					  destino:$("#destinatario").val(),
-					};
-	$.ajax({
-		type:"post",
-		url:"/enviar",
-		headers: {
-    		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  		},
-		data:contenido,
-		complete:function(data){
-			$("#mails").modal("hide");
-		}
-	});
-});
+// 	var contenido = { contenido:$("#carta").html(),
+// 					  destino:$("#destinatario").val(),
+// 					};
+// 	$.ajax({
+// 		type:"post",
+// 		url:"/enviar",
+// 		headers: {
+//     		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//   		},
+// 		data:contenido,
+// 		complete:function(data){
+// 			$("#mails").modal("hide");
+// 		}
+// 	});
+// });
 
 function crearCarta(contenido, nombre_archivo){
 	var contenido = {"contenido":contenido,

@@ -1,5 +1,6 @@
 @extends('plantillas/layaout')
 @section('encabezado')
+<meta name="csrf-token" content="{{ csrf_token() }}">
     @parent
     <style type="text/css">
 
@@ -31,8 +32,27 @@
 @section('navigation')
     @parent
 @endsection
+<div class="container" >
+<div class="row col-lg-offset-1">
+    <div class="col-lg-2">
+        <h4>Nombre Carta</h4>
+    </div>
+    <div class="col-lg-6">
+        <input class="form-control" type="text" id="nombre_archivo">             
+    </div> 
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-md btn-primary center-block" id="btnGuardar">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
+        </button>
+    </div>
+    <!-- <div class="col-lg-2">
+        <button type="button" class="btn btn-md btn-primary center-block" id="btnEnviar"> 
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
+        </button>
+    </div>  -->          
+</div>
 @yield('contenidoCarta')
-<div class="row">
+<!-- <div class="row">
         <button type="button" class="btn btn-lg btn-primary" id="btnGuardar">
             <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
         </button>
@@ -40,8 +60,8 @@
             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Enviar Mail
         </button>
     </div>
+</div> -->
 </div>
-
 <!--Modal-->
 <div class="modal fade" id="modal">
     <div class="modal-dialog">

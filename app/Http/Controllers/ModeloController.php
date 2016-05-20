@@ -55,6 +55,7 @@ class ModeloController extends Controller
         //$modelos = ModeloCompartido::where('destinatario','=',$usuario)->get();
         $modelos = DB::table('modelo_compartidos')
                         ->join('modelo_usuarios','modelo_compartidos.id_modelo','=','modelo_usuarios.id')
+                        ->where('modelo_compartidos.destinatario','=',$usuario)
                         ->get();
         return view('compartidos',['modelos'=>$modelos]);
     }

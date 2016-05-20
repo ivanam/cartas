@@ -1,6 +1,6 @@
 @extends('plantillas/layaoutCarta')
 @section('contenidoCarta')
-<div class="container" >
+
     <div class="row" id="carta">
         <p align="right"><span id ="editable" contenteditable="true">Trelew, 17 de junio de 2016</span></p>
     	<b align="left"><span id ="editable" contenteditable="true">Nombre de la empresa</span></b>
@@ -17,5 +17,5 @@
         <br><br>
         <p align="center"> FIRMA Y SELLO DE LA EMPRESA </p>
     </div>
-</div>
+
  @endsection
