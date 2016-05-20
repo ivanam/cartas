@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\ModeloUsuario as Modelo;
+use App\ModeloCompartido;
+
+use DB;
 
 class ModeloController extends Controller
 {
@@ -48,10 +51,21 @@ class ModeloController extends Controller
     }
 
     public function compartidos(Request $request){
-
+        $usuario = $request->user()->email;
+        //$modelos = ModeloCompartido::where('destinatario','=',$usuario)->get();
+        $modelos = DB::table('modelo_compartidos')
+                        ->join('modelo_usuarios','modelo_compartidos.id_modelo','=','modelo_usuarios.id')
+                        ->get();
+        return view('compartidos',['modelos'=>$modelos]);
     }
 
     public function compartir(Request $request){
-
+        $data = $request->all();
+        $modelo_compartido = new ModeloCompartido;
+        $modelo_compartido->emisor = $request->user()->email;
+        $modelo_compartido->destinatario = $data["destinatario"];
+        $modelo_compartido->id_modelo = $data["id_modelo"];
+        $modelo_compartido->save();
+        return "1";
     }
 }

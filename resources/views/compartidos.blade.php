@@ -56,10 +56,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Mis Modelos</a>
-                    </li>
                     <li>
+                        <a href="{{ URL::to('mismodelos') }}">Mis Modelos</a>
+                    </li>
+                    <li class="active">
                         <a href="#">Modelos Compartidos</a>
                     </li>
                     <li>
@@ -81,12 +81,14 @@
             <br>
 
             <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
                 <table class="table">
                     <thead>
                     <tr>
-                        <th> Nombre </th>       
-                        <th> Descripcion </th>
-                        <th> Fecha Creación </th>
+                        <th> Nombre </th>
+                        <th> Descripcion </th>     
+                        <th> Compartido por </th>
+                        <th> Compartido el </th>
                         <th>  </th>
                     </tr>
                     </thead>
@@ -96,57 +98,24 @@
                         echo "<tr>";
                         echo "<td>".$modelo->nombre."</td>";
                         echo "<td>".$modelo->descripcion."</td>";
+                        echo "<td>".$modelo->emisor."</td>";
                         echo "<td>".$modelo->created_at."</td>";
                         echo '<td> 
-                                <a href="plantillas/'.$modelo->id.'" class="btn btn-sm btn-primary">
+                                <a href="plantillas/'.$modelo->id_modelo.'" class="btn btn-sm btn-primary">
                                     <span class="glyphicon glyphicon-hand-right"></span> Usar
-                                </a>
-                                <button type="button" class="btn btn-sm btn-danger">
-                                    <span class="glyphicon glyphicon-trash"></span> Eliminar
-                                </button>
-                                <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
-                                    <span class="glyphicon glyphicon-share"></span> Compartir
                                 </a>
                             </td>';
                         echo "</tr>";
                     ?>
-                    </div>
                     @endforeach
+
                 </table>
+                </div>
             </div>          
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="compartir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Modelo</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="input-group input-group-lg">
-                              <span class="input-group-addon" id="sizing-addon1">@</span>
-                              <input id="destinatario" type="text" class="form-control" placeholder="ejemplo@ejemplo.com" aria-describedby="sizing-addon1">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button id="btnCompartir" class="btn btn-default pull-right"> Ok</button> 
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <!--- Scripts -->    
     <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/mismodelos.js') }}"></script>
 </body>
 </html>

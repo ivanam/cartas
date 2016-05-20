@@ -30,7 +30,6 @@ Route::get('plantillas/carta_despido',function(){
 	return view('plantillas/carta_despido');
 });
 
-
 Route::get('plantillas/{id}','PlantillaController@armarplantilla');
 
 Route::post('enviar', 'MailController@enviar');

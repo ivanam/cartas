@@ -44,7 +44,7 @@
                         <a href="{{ URL::to('mismodelos') }}">Mis Modelos</a>
                     </li>
                     <li>
-                        <a href="#">Modelos Compartidos</a>
+                        <a href="{{ URL::to('compartidos') }}">Modelos Compartidos</a>
                     </li>
                     <li>
                         <a href="{{ URL::to('miscartas') }}">Mis cartas</a>
