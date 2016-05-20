@@ -19,8 +19,10 @@ $("#btnEnviarModal").click(function(){
   		},
 		data:data,
 		complete:function(data){
-			$("#mails").modal("hide");
+			alert("Mail enviado");
 		}
 	});
+
+	$("#mails").modal("hide");
 	
 });

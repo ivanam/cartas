@@ -105,9 +105,6 @@
                                     <a href="plantillas/'.$modelo->id.'" class="btn btn-sm btn-primary">
                                         <span class="glyphicon glyphicon-hand-right"></span> Usar
                                     </a>
-                                    <button type="button" class="btn btn-sm btn-danger">
-                                        <span class="glyphicon glyphicon-trash"></span> Eliminar
-                                    </button>
                                     <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
                                         <span class="glyphicon glyphicon-share"></span> Compartir
                                     </a>

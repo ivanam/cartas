@@ -31,7 +31,7 @@ class ModeloController extends Controller
     	$plantilla->nombre = $nombre;
     	$plantilla->descripcion = $descripcion;
     	$plantilla->save();
-    	return $cadena;
+    	return "1";
     }
 
     public function mismodelos(Request $request){

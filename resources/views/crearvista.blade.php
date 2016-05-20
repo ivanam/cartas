@@ -51,7 +51,7 @@
     <div class="container">
         
         <div class="row">
-            <textarea id="areaCreacion">Crear tu [carta]</textarea>    
+            <textarea id="areaCreacion"></textarea>    
         </div>
         <br>
         <div class="row">

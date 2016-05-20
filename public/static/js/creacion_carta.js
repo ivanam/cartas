@@ -3,6 +3,12 @@
 	
 })*/
 
+$("#btnBorrar").click(function(){
+
+	tinyMCE.activeEditor.setContent("");
+
+});
+
 $("#btnCrear").click(function(){
 
 	$("#modalEnvio").modal("show");
@@ -26,9 +32,10 @@ $("#btnOk").click(function(){
 		data:contenido,
 		dataType:"json",
 		complete:function(data){
-			console.log(data.responseText);
+			console.data(data);
 		}
 	});
 
-
+	$("#modalEnvio").modal("hide");
+	tinyMCE.activeEditor.setContent("");
 });
