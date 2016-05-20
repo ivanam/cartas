@@ -19,7 +19,12 @@ $("#btnEnviarModal").click(function(){
   		},
 		data:data,
 		complete:function(data){
-			alert("Mail enviado");
+			var modal = $("#modal");
+			modal.find(".modal-title").text("Exito");
+			modal.find(".modal-body p").text("El mail ha sido enviado");
+			modal.find(".modal-header").attr({"style":"background-color:#337ab7"});
+			modal.find("h4").attr({"style":"color: black"});
+			modal.modal("show");
 		}
 	});
 

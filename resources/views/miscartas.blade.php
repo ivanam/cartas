@@ -15,29 +15,6 @@
     <!-- Custom CSS -->
     <link href="{{ URL::asset('static/css/portada.css') }}" rel="stylesheet">
 
-    <style type="text/css">
-
-        #editable {
-          background: #E6E6E6;
-          border-radius: 2px;
-          /*box-shadow: 0 1px 5px rgba(0,0,0,0.15) inset;*/
-          outline: none;
-          border: 2px solid transparent;
-
-        }
-
-        #editable:focus{
-            background-color: #FFF;
-            border-color: #69c773;
-        }
-
-        #carta{
-            border-radius: 25px;
-            border: 5px solid #0B0B61;
-            padding: 20px;  
-        }
-
-    </style>
 </head>
 <body>
 	<!-- Navigation -->
@@ -87,7 +64,7 @@
             <br>
 
             <div class="row">
-                <div class="col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1">
                     <table class="table">
                         <thead>
                         <tr>
@@ -109,9 +86,6 @@
                                     <a id='.$carta->id.' class="btn btn-sm btn-warning">
                                         <span class="glyphicon glyphicon-envelope"></span> Enviar
                                     </a>
-                                    <button type="button" class="btn btn-sm btn-default">
-                                        <span class="glyphicon glyphicon-eye-open"></span> Ver
-                                    </button>
                                 </td>';
                             echo "</tr>";
                         ?>

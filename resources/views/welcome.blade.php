@@ -19,7 +19,7 @@
         <div class="row">
             <div class=" over col-md-6 portfolio-item">
                 
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+                    <img class="img-responsive" src="{{ URL::asset('static/img/carta.jpg') }}" alt="">
                     <!-- <span class="info glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                     <span class=" info glyphicon glyphicon-pencil" aria-hidden="true"></span> -->
                 <h3>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+                    <img class="img-responsive" src="{{ URL::asset('static/img/carta.jpg') }}" alt="">
                 </a>
                 <h3>
                     <a href="{{ URL::to('plantillas/carta_despido') }}">Carta 2</a>
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+                    <img class="img-responsive" src="{{ URL::asset('static/img/carta.jpg') }}" alt="">
 
                 </a>
                 <h3>
@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+                    <img class="img-responsive" src="{{ URL::asset('static/img/carta.jpg') }}" alt="">
                 </a>
                 <h3>
                     <a href="{{ URL::to('plantillas/carta_rector') }}">Carta 4</a>

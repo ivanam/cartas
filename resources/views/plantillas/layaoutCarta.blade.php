@@ -21,7 +21,8 @@
         #carta{
             border-radius: 25px;
             border: 5px solid #0B0B61;
-            padding: 20px;  
+            padding: 20px;
+            box-shadow: 10px 10px 10px #888888;
         }
     </style>
 @endsection
@@ -51,6 +52,7 @@
         </button>
     </div>  -->          
 </div>
+<br>
 @yield('contenidoCarta')
 <!-- <div class="row">
         <button type="button" class="btn btn-lg btn-primary" id="btnGuardar">
