@@ -16,7 +16,7 @@ class MailController extends Controller
 
     	$info = $request->all();
     	$ruta = CartaUsuario::find($info["id_pdf"])->patharchivo;
-    	$r= Mail::send('emails.info',$info,function($msj) use($datos){
+    	$r= Mail::send('emails.info',$info,function($msj) use($info,$ruta){
     	   	$msj->subject('Carta Generada');
     	   	$msj->to($info["destino"]);
     	   	$msj->attach($ruta);
