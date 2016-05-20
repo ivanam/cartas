@@ -25,6 +25,15 @@ Route::get('creador',function(){
 Route::get('plantillas/carta_invitacion',function(){
 	return view('plantillas/carta_invitacion');
 });
+Route::get('plantillas/carta_despido', function(){
+	return view('plantillas/carta_despido');
+});
+Route::get('plantillas/carta_reclamo', function(){
+	return view('plantillas/carta_reclamo');
+});
+Route::get('plantillas/carta_rector', function(){
+	return view('plantillas/carta_rector');
+});
 
 Route::get('plantillas/carta_despido',function(){
 	return view('plantillas/carta_despido');

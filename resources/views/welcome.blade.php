@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+@extends('plantillas.layaout')
+@section('contenido')
+<!-- Page Content -->
+<div class="container">
 
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,102 +57,61 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+=======
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Modelos Cartas</h1>
+>>>>>>> 24db8d5af7943d0581465714cc5c290406a505de
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Modelos Cartas</h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class=" over col-md-6 portfolio-item">
-                
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-                    <!-- <span class="info glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    <span class=" info glyphicon glyphicon-pencil" aria-hidden="true"></span> -->
-                <h3>
-                    <a href="{{ URL::to('plantillas/carta_invitacion') }}">Carta 1</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-                </a>
-                <h3>
-                    <a href="#">Carta 2</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-
-                </a>
-                <h3>
-                    <a href="#">Carta 3</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-                </a>
-                <h3>
-                    <a href="#">Carta 4</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-                <h3>
-                    <a href="#">Carta 5</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
-                </a>
-                <h3>
-                    <a href="#">Carta 6</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        
-
     </div>
-    <!-- /.container -->
+    <!-- /.row -->
 
+    <!-- Projects Row -->
+    <div class="row">
+        <div class=" over col-md-6 portfolio-item">
+            
+                <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+                <!-- <span class="info glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                <span class=" info glyphicon glyphicon-pencil" aria-hidden="true"></span> -->
+            <h3>
+                <a href="{{ URL::to('plantillas/carta_invitacion') }}">Carta 1</a>
+            </h3>
+            <p>Modelo de carta de invitación</p>
+        </div>
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+            </a>
+            <h3>
+                <a href="{{ URL::to('plantillas/carta_despido') }}">Carta 2</a>
+            </h3>
+            <p>Modelo de carta de despido</p>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
 
-
-    <!--- Scripts -->    
-    <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
-
-</body>
-
-</html>
+            </a>
+            <h3>
+                <a href="{{ URL::to('plantillas/carta_reclamo') }}">Carta 3</a>
+            </h3>
+            <p>Modelo de carta de reclamo a la municipalidad</p>
+        </div>
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="{{ URL::asset('static/img/placeholder-img.png') }}" alt="">
+            </a>
+            <h3>
+                <a href="{{ URL::to('plantillas/carta_rector') }}">Carta 4</a>
+            </h3>
+            <p>Modelo de carta al rector para reincorporación</p>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+@endsection
