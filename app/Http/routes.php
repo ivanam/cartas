@@ -60,4 +60,3 @@ Route::get('miscartas','CartaController@miscartas');
 
 Route::get('descargar/{nombre}','PdfController@descargar');
 Route::post('guardar','PdfController@guardar');
-
