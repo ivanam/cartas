@@ -2,6 +2,9 @@
 <html>
 <head>
     <title> Creador de Cartas</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap Core CSS -->
     <link href="{{ URL::asset('static/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -33,7 +36,7 @@
                         <a href="{{ URL::to('mismodelos') }}">Mis Modelos</a>
                     </li>
                     <li>
-                        <a href="#">Modelos Compartidos</a>
+                        <a href="{{ URL::to('compartidos')}}">Modelos Compartidos</a>
                     </li>
                     <li>
                         <a href="{{ URL::to('miscartas') }}">Mis Cartas</a>
@@ -54,17 +57,21 @@
     <div class="container">
         
         <div class="row">
-            <textarea id="areaCreacion"></textarea>    
+            <div class="col-lg-10 col-sm-12 col-sm-offset-1 col-lg-offset-1">
+                <textarea id="areaCreacion"></textarea>
+            </div>
         </div>
         <br>
         <div class="row">
-            <button type="button" class="btn btn-md btn-danger pull-right" id="btnBorrar"> 
-                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar
-            </button>
-            <span class="pull-right"> &nbsp;</span>
-            <button type="button" class="btn btn-md btn-success pull-right" id="btnCrear">
-                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Crear
-            </button>
+            <div class="col-lg-10 col-sm-12 col-sm-offset-1 col-lg-offset-1">
+                <button type="button" class="btn btn-md btn-danger pull-right" id="btnBorrar"> 
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Borrar
+                </button>
+                <span class="pull-right"> &nbsp;</span>
+                <button type="button" class="btn btn-md btn-success pull-right" id="btnCrear">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Crear
+                </button>
+            </div>
         </div>
     </div>
 
